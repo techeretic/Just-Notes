@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pshetye.justnotes.ViewNoteActivity"
+    android:background="?attr/backgroundcolor" >
+
+    <include
+        android:id="@+id/my_awesome_toolbar"
+        layout="@layout/activity_toolbar"/>
+    <View 
+        android:id="@+id/temp_view"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="vertical"
+        android:layout_below="@id/my_awesome_toolbar" />
+    <LinearLayout 
+        android:id="@+id/layout_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/temp_view" >
+	    <TextView
+	        android:id="@+id/notetitleview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginStart="10dp"
+	        android:layout_marginEnd="10dp"
+	        android:layout_marginTop="15dp"
+	        android:gravity="top|start"
+	        android:isScrollContainer="true"
+	        android:scrollbars = "vertical"
+	        android:autoLink="web"
+	        android:linksClickable="true"
+        	android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+        
+	    <TextView
+	        android:id="@+id/notetextview"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginStart="10dp"
+	        android:layout_marginEnd="10dp"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginBottom="15dp"
+	        android:gravity="top|start"        
+	        android:isScrollContainer="true"
+	        android:scrollbars = "vertical"
+	        android:autoLink="web"
+	        android:linksClickable="true"
+        	android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+    </LinearLayout>
+</RelativeLayout><!-- From: file:/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/src/main/res/layout/activity_view_note.xml -->

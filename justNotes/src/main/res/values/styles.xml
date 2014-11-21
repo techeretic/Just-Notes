@@ -1,0 +1,161 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <!-- Application theme. DARK  ******************************************* -->
+    <style name="AppBaseThemeDark" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/primary_material_dark</item>
+        <item name="colorPrimaryDark">@color/primary_dark_material_dark</item>
+    	<item name="colorAccent">@color/accent_material_dark</item>
+        <item name="cardColor">@color/dark_gray</item>
+    	<item name="android:textColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="addButton">@drawable/ic_action_new_light</item>
+        <item name="deleteButton">@drawable/ic_action_discard_light</item>
+        <item name="shareButton">@drawable/ic_action_share_light</item>
+        <item name="editButton">@drawable/ic_action_edit_light</item>
+        <item name="saveButton">@drawable/ic_action_save_light</item>
+        <item name="searchButton">@drawable/ic_search_light</item>
+        <item name="paletteButton">@drawable/ic_palette_light</item>
+        <item name="homeButtonNotes">@drawable/ic_assignment_light</item>
+        <item name="homeButtonViewNote">@drawable/ic_speaker_notes_light</item>
+        <item name="backgroundcolor">@color/background_material_dark</item>
+        <item name="fab_color">@color/primary_dark_material_dark</item>
+        <item name="eTextColor">@color/abc_primary_text_material_dark</item>
+        <item name="hTextColor">@color/dark_gray</item>
+    </style>
+    <style name="AppThemeDark" parent="AppBaseThemeDark">
+    </style>
+    
+    <!-- Application theme. LIGHT  ******************************************* -->
+    <style name="AppBaseThemeLight" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/primary_material_light</item>
+        <item name="colorPrimaryDark">@color/primary_dark_material_light</item>
+        <item name="colorAccent">@color/accent_material_light</item>
+        <item name="cardColor">@color/light_gray</item>
+        <item name="android:textColor">@color/abc_primary_text_material_light</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="addButton">@drawable/ic_action_new_dark</item>
+        <item name="deleteButton">@drawable/ic_action_discard_dark</item>
+        <item name="shareButton">@drawable/ic_action_share_dark</item>
+        <item name="editButton">@drawable/ic_action_edit_dark</item>
+        <item name="saveButton">@drawable/ic_action_save_dark</item>
+        <item name="searchButton">@drawable/ic_search_dark</item>
+        <item name="paletteButton">@drawable/ic_palette_dark</item>
+        <item name="homeButtonNotes">@drawable/ic_assignment_dark</item>
+        <item name="homeButtonViewNote">@drawable/ic_speaker_notes_dark</item>
+        <item name="backgroundcolor">@color/background_material_light</item>
+        <item name="fab_color">@color/primary_dark_material_light</item>
+        <item name="eTextColor">@color/abc_primary_text_material_light</item>
+        <item name="hTextColor">@color/dark_gray</item>
+    </style>
+    <style name="AppThemeLight" parent="AppBaseThemeLight">
+    </style>
+
+    <!-- Application theme. RED  ******************************************* -->
+    <style name="AppBaseThemeRedDark" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/primary_red</item>
+        <item name="colorPrimaryDark">@color/primary_dark_red</item>
+        <item name="colorAccent">@color/accent_red</item>
+        <item name="cardColor">@color/dark_gray</item>
+        <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="addButton">@drawable/ic_action_new_dark</item>
+        <item name="deleteButton">@drawable/ic_action_discard_dark</item>
+        <item name="shareButton">@drawable/ic_action_share_dark</item>
+        <item name="editButton">@drawable/ic_action_edit_dark</item>
+        <item name="saveButton">@drawable/ic_action_save_dark</item>
+        <item name="searchButton">@drawable/ic_search_dark</item>
+        <item name="paletteButton">@drawable/ic_palette_dark</item>
+        <item name="homeButtonNotes">@drawable/ic_assignment_dark</item>
+        <item name="homeButtonViewNote">@drawable/ic_speaker_notes_dark</item>
+        <item name="backgroundcolor">@color/background_material_dark</item>
+        <item name="fab_color">@color/primary_dark_material_dark</item>
+        <item name="eTextColor">@color/abc_primary_text_material_dark</item>
+        <item name="hTextColor">@color/dark_gray</item>
+    </style>
+    <style name="AppThemeRedDark" parent="AppBaseThemeRedDark">
+    </style>
+
+    <!-- Application theme. RED  ******************************************* -->
+    <style name="AppBaseThemeRedLight" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/primary_red</item>
+        <item name="colorPrimaryDark">@color/primary_dark_red</item>
+        <item name="colorAccent">@color/accent_red</item>
+        <item name="cardColor">@color/light_gray</item>
+        <item name="android:textColor">@color/abc_primary_text_material_light</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="addButton">@drawable/ic_action_new_light</item>
+        <item name="deleteButton">@drawable/ic_action_discard_light</item>
+        <item name="shareButton">@drawable/ic_action_share_light</item>
+        <item name="editButton">@drawable/ic_action_edit_light</item>
+        <item name="saveButton">@drawable/ic_action_save_light</item>
+        <item name="searchButton">@drawable/ic_search_light</item>
+        <item name="paletteButton">@drawable/ic_palette_light</item>
+        <item name="homeButtonNotes">@drawable/ic_assignment_light</item>
+        <item name="homeButtonViewNote">@drawable/ic_speaker_notes_light</item>
+        <item name="backgroundcolor">@color/background_material_light</item>
+        <item name="fab_color">@color/primary_dark_material_light</item>
+        <item name="eTextColor">@color/abc_primary_text_material_light</item>
+        <item name="hTextColor">@color/dark_gray</item>
+    </style>
+    <style name="AppThemeRedLight" parent="AppBaseThemeRedLight">
+    </style>
+
+    <!-- Application theme. BLUE  ******************************************* -->
+    <style name="AppBaseThemeBlueDark" parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryDark">@color/primary_dark_blue</item>
+        <item name="colorAccent">@color/accent_blue</item>
+        <item name="cardColor">@color/dark_gray</item>
+        <item name="android:textColor">@color/abc_primary_text_material_dark</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="addButton">@drawable/ic_action_new_dark</item>
+        <item name="deleteButton">@drawable/ic_action_discard_dark</item>
+        <item name="shareButton">@drawable/ic_action_share_dark</item>
+        <item name="editButton">@drawable/ic_action_edit_dark</item>
+        <item name="saveButton">@drawable/ic_action_save_dark</item>
+        <item name="searchButton">@drawable/ic_search_dark</item>
+        <item name="paletteButton">@drawable/ic_palette_dark</item>
+        <item name="homeButtonNotes">@drawable/ic_assignment_dark</item>
+        <item name="homeButtonViewNote">@drawable/ic_speaker_notes_dark</item>
+        <item name="backgroundcolor">@color/background_material_dark</item>
+        <item name="fab_color">@color/primary_dark_material_dark</item>
+        <item name="eTextColor">@color/abc_primary_text_material_dark</item>
+        <item name="hTextColor">@color/dark_gray</item>
+    </style>
+
+    <!-- Application theme. BLUE  ******************************************* -->
+    <style name="AppBaseThemeBlueLight" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryDark">@color/primary_dark_blue</item>
+        <item name="colorAccent">@color/accent_blue</item>
+        <item name="cardColor">@color/light_gray</item>
+        <item name="android:textColor">@color/abc_primary_text_material_light</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="addButton">@drawable/ic_action_new_light</item>
+        <item name="deleteButton">@drawable/ic_action_discard_light</item>
+        <item name="shareButton">@drawable/ic_action_share_light</item>
+        <item name="editButton">@drawable/ic_action_edit_light</item>
+        <item name="saveButton">@drawable/ic_action_save_light</item>
+        <item name="searchButton">@drawable/ic_search_light</item>
+        <item name="paletteButton">@drawable/ic_palette_light</item>
+        <item name="homeButtonNotes">@drawable/ic_assignment_light</item>
+        <item name="homeButtonViewNote">@drawable/ic_speaker_notes_light</item>
+        <item name="backgroundcolor">@color/background_material_light</item>
+        <item name="fab_color">@color/primary_dark_material_light</item>
+        <item name="eTextColor">@color/abc_primary_text_material_light</item>
+        <item name="hTextColor">@color/dark_gray</item>
+    </style>
+    <style name="AppThemeBlueLight" parent="AppBaseThemeBlueLight">
+    </style>
+
+</resources>

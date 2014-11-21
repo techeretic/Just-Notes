@@ -1,0 +1,8 @@
+/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/build/intermediates/classes/release
+/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/build/intermediates/pre-dexed/release/support-annotations-21.0.2-799d88366616ab0aed3d36faf51b8c7a8964fb51.jar
+/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/build/intermediates/pre-dexed/release/classes-3628b2f1973322c1ab2aae005224c53bc1c52fef.jar
+/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/build/intermediates/pre-dexed/release/internal_impl-21.0.2-ab6520ad766e84747f340f3513053bd610cb9234.jar
+/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/build/intermediates/pre-dexed/release/gson-2.3-009fed30b34585d34d1b3dd9b84299d4c87cccd9.jar
+/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/build/intermediates/pre-dexed/release/classes-d2ce0e09ea43749169e10825f6f653f0c97550f1.jar
+/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/build/intermediates/pre-dexed/release/classes-18b4bcefc3a9df99ca5791cecb08a91f2a5c065a.jar
+/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/build/intermediates/pre-dexed/release/classes-3a108995b9ec0f3a2e1d55bcb70b47700eac6bb5.jar

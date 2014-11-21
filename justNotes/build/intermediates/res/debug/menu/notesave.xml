@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"    
+    xmlns:justnotes="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.pshetye.justnotes.NoteActivity" >
+
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        justnotes:showAsAction="always"
+        android:icon="?attr/saveButton"
+        android:title="@string/action_save"
+        style="@android:style/Widget.ActionButton" />
+    
+</menu>
+<!-- From: file:/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/src/main/res/menu/notesave.xml -->

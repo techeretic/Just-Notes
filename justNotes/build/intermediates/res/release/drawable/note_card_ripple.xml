@@ -1,0 +1,10 @@
+<ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#c3c3c3">
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid android:color="#ffffff" />
+        </shape>
+    </item>
+</ripple><!-- From: file:/home/p.shetye/AndroidstudioProjects/JustNotes/justNotes/src/main/res/drawable/note_card_ripple.xml -->

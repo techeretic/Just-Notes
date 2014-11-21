@@ -1,0 +1,16 @@
+<resources>
+    <attr name="cardColor" format="color" />
+    <attr name="addButton"/>
+    <attr name="deleteButton"/>
+    <attr name="shareButton"/>
+    <attr name="editButton"/>
+    <attr name="saveButton"/>
+    <attr name="searchButton"/>
+    <attr name="paletteButton"/>
+    <attr name="homeButtonNotes"/>
+    <attr name="homeButtonViewNote"/>
+    <attr name="backgroundcolor" format="color" />
+    <attr name="fab_color" format="color" />
+    <attr name="eTextColor" format="color" />
+    <attr name="hTextColor" format="color" />
+</resources>
