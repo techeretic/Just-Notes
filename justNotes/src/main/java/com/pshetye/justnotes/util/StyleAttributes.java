@@ -20,7 +20,8 @@ public class StyleAttributes {
     public static int saveButton;
     public static int searchButton;
     public static int paletteButton;
-    public static int homeButtonNotes;
+    public static int homeButtonNotesLinear;
+    public static int homeButtonNotesGrid;
     public static int homeButtonViewNote;
     public static int backgroundcolor;
     public static int fab_color ;
@@ -41,7 +42,8 @@ public class StyleAttributes {
                 StyleAttributes.saveButton            = R.drawable.ic_action_save_light;
                 StyleAttributes.searchButton          = R.drawable.ic_search_light;
                 StyleAttributes.paletteButton         = R.drawable.ic_palette_light;
-                StyleAttributes.homeButtonNotes       = R.drawable.ic_assignment_light;
+                StyleAttributes.homeButtonNotesLinear = R.drawable.ic_view_headline_light;
+                StyleAttributes.homeButtonNotesGrid   = R.drawable.ic_dashboard_light;
                 StyleAttributes.homeButtonViewNote    = R.drawable.ic_speaker_notes_light;
                 StyleAttributes.backgroundcolor       = android.R.color.darker_gray;
                 StyleAttributes.fab_color             = android.R.color.holo_orange_dark;
@@ -60,7 +62,8 @@ public class StyleAttributes {
                 StyleAttributes.saveButton            = R.drawable.ic_action_save_dark;
                 StyleAttributes.searchButton          = R.drawable.ic_search_dark;
                 StyleAttributes.paletteButton         = R.drawable.ic_palette_dark;
-                StyleAttributes.homeButtonNotes       = R.drawable.ic_assignment_dark;
+                StyleAttributes.homeButtonNotesLinear = R.drawable.ic_view_headline_dark;
+                StyleAttributes.homeButtonNotesGrid   = R.drawable.ic_dashboard_dark;
                 StyleAttributes.homeButtonViewNote    = R.drawable.ic_speaker_notes_dark;
                 StyleAttributes.backgroundcolor       = android.R.color.primary_text_light;
                 StyleAttributes.fab_color             = android.R.color.holo_red_dark;
@@ -79,7 +82,8 @@ public class StyleAttributes {
                 StyleAttributes.saveButton            = R.drawable.ic_action_save_dark;
                 StyleAttributes.searchButton          = R.drawable.ic_search_dark;
                 StyleAttributes.paletteButton         = R.drawable.ic_palette_dark;
-                StyleAttributes.homeButtonNotes       = R.drawable.ic_assignment_dark;
+                StyleAttributes.homeButtonNotesLinear = R.drawable.ic_view_headline_dark;
+                StyleAttributes.homeButtonNotesGrid   = R.drawable.ic_dashboard_dark;
                 StyleAttributes.homeButtonViewNote    = R.drawable.ic_speaker_notes_dark;
                 StyleAttributes.backgroundcolor       = android.R.color.primary_text_light;
                 StyleAttributes.fab_color             = android.R.color.holo_blue_dark;
@@ -98,7 +102,8 @@ public class StyleAttributes {
                 StyleAttributes.saveButton            = R.drawable.ic_action_save_light;
                 StyleAttributes.searchButton          = R.drawable.ic_search_light;
                 StyleAttributes.paletteButton         = R.drawable.ic_palette_light;
-                StyleAttributes.homeButtonNotes       = R.drawable.ic_assignment_light;
+                StyleAttributes.homeButtonNotesLinear = R.drawable.ic_view_headline_light;
+                StyleAttributes.homeButtonNotesGrid   = R.drawable.ic_dashboard_light;
                 StyleAttributes.homeButtonViewNote    = R.drawable.ic_speaker_notes_light;
                 StyleAttributes.backgroundcolor       = android.R.color.primary_text_light;
                 StyleAttributes.fab_color             = android.R.color.holo_blue_dark;
@@ -117,7 +122,8 @@ public class StyleAttributes {
                 StyleAttributes.saveButton            = R.drawable.ic_action_save_dark;
                 StyleAttributes.searchButton          = R.drawable.ic_search_dark;
                 StyleAttributes.paletteButton         = R.drawable.ic_palette_dark;
-                StyleAttributes.homeButtonNotes       = R.drawable.ic_assignment_dark;
+                StyleAttributes.homeButtonNotesLinear = R.drawable.ic_view_headline_dark;
+                StyleAttributes.homeButtonNotesGrid   = R.drawable.ic_dashboard_dark;
                 StyleAttributes.homeButtonViewNote    = R.drawable.ic_speaker_notes_dark;
                 StyleAttributes.backgroundcolor       = android.R.color.primary_text_light;
                 StyleAttributes.fab_color             = android.R.color.holo_green_dark;
@@ -136,7 +142,8 @@ public class StyleAttributes {
                 StyleAttributes.saveButton            = R.drawable.ic_action_save_light;
                 StyleAttributes.searchButton          = R.drawable.ic_search_light;
                 StyleAttributes.paletteButton         = R.drawable.ic_palette_light;
-                StyleAttributes.homeButtonNotes       = R.drawable.ic_assignment_light;
+                StyleAttributes.homeButtonNotesLinear = R.drawable.ic_view_headline_light;
+                StyleAttributes.homeButtonNotesGrid   = R.drawable.ic_dashboard_light;
                 StyleAttributes.homeButtonViewNote    = R.drawable.ic_speaker_notes_light;
                 StyleAttributes.backgroundcolor       = android.R.color.primary_text_light;
                 StyleAttributes.fab_color             = android.R.color.holo_green_dark;

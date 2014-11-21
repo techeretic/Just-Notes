@@ -26,6 +26,8 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.OnScrollListener;
 import android.support.v7.widget.SearchView;
@@ -47,17 +49,24 @@ public class NoteActivity extends BaseActivity {
     private static final String LOG_TAG = "NoteActivity";
     public static final String SHARED_PREF_APP_DATA = "APP_DATA";
 
-    protected Object mActionMode;
-
     private FloatingActionButton mFAddButton = null;
 
-    private static List<MyNote> sMyNotes = new ArrayList<MyNote>();
+    private static List<MyNote> sMyNotes;
+
+    static {
+        sMyNotes = new ArrayList<MyNote>();
+    }
 
     public static boolean sDoUpdate = false;
 
     private RecyclerView mRecyclerView;
     
     private SharedPreferences mPrefs;
+
+    private static final int sLinear = 1;
+    private static final int sStaggeredGrid = 2;
+
+    private static int mCurrentLayout = 2;
 
     @SuppressWarnings("rawtypes")
     private RecyclerView.Adapter mAdapter;
@@ -67,9 +76,10 @@ public class NoteActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         Log.d(LOG_TAG, "Inside onCreate");
         mRecyclerView = (RecyclerView) findViewById(R.id.ListView);
-        displayNotes();
-        mPrefs = getSharedPreferences(
-                SHARED_PREF_APP_DATA, MODE_PRIVATE);
+        mPrefs = getSharedPreferences(SHARED_PREF_APP_DATA, MODE_PRIVATE);
+        mCurrentLayout = mPrefs.getInt(BaseActivity.SHARED_PREF_KEY_LAYOUT, sStaggeredGrid);
+        Log.d(LOG_TAG, "mCurrentLayout = " + mCurrentLayout);
+        displayNotes(mCurrentLayout);
 
         // Add Button - Holder Fragment
         mFAddButton = new FloatingActionButton.Builder(this)
@@ -126,8 +136,6 @@ public class NoteActivity extends BaseActivity {
                                 view.findViewById(R.id.temp_view), note);
                     }
                 }));
-
-        setActionBarIcon(StyleAttributes.homeButtonNotes);
     }
 
     @Override
@@ -173,6 +181,17 @@ public class NoteActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
+                if (mCurrentLayout == sStaggeredGrid) {
+                    mCurrentLayout = sLinear;
+                    displayNotes(mCurrentLayout);
+                } else {
+                    mCurrentLayout = sStaggeredGrid;
+                    displayNotes(mCurrentLayout);
+                }
+                Log.d(LOG_TAG,"IN onOptionsItemSelected | mCurrentLayout = " + mCurrentLayout);
+                Editor editor = mPrefs.edit();
+                editor.putInt(BaseActivity.SHARED_PREF_KEY_LAYOUT, mCurrentLayout);
+                editor.commit();
                 return true;
             case R.id.theme:
                 createDialog();
@@ -189,7 +208,7 @@ public class NoteActivity extends BaseActivity {
 
         if (sDoUpdate) {
             Log.d(LOG_TAG, "sDoUpdate is TRUE");
-            displayNotes();
+            displayNotes(mPrefs.getInt(BaseActivity.SHARED_PREF_KEY_LAYOUT, sStaggeredGrid));
         } else {
             Log.d(LOG_TAG, "sDoUpdate is FALSE");
         }
@@ -277,18 +296,24 @@ public class NoteActivity extends BaseActivity {
         return orientation;
     }
 
-    private void displayNotes() {
+    private void displayNotes(int layout) {
         int orientation = getScreenOrientation();
         sMyNotes = DatabaseHelper.getInstance(NoteActivity.this).getAllNotes();
         mAdapter = new RecycleAdapter(sMyNotes, this);
         mRecyclerView.setAdapter(mAdapter);
-        if (orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
-                || orientation == ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT) {
-            mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,
-                    StaggeredGridLayoutManager.VERTICAL));
+        if (layout == sLinear) {
+            mRecyclerView.setLayoutManager(new LinearLayoutManager(NoteActivity.this));
+            setActionBarIcon(StyleAttributes.homeButtonNotesGrid);
         } else {
-            mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3,
-                    StaggeredGridLayoutManager.VERTICAL));
+            if (orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+                    || orientation == ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT) {
+                mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,
+                            StaggeredGridLayoutManager.VERTICAL));
+            } else {
+                mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3,
+                            StaggeredGridLayoutManager.VERTICAL));
+            }
+            setActionBarIcon(StyleAttributes.homeButtonNotesLinear);
         }
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
     }
@@ -304,7 +329,7 @@ public class NoteActivity extends BaseActivity {
         /** Setting a title for the window */
         b.setTitle("Choose your Application Theme");
 
-        int existing_theme = mPrefs.getInt("theme", 0);
+        int existing_theme = mPrefs.getInt(BaseActivity.SHARED_PREF_KEY_THEME, 0);
         Log.d(LOG_TAG,"Theme info | existing_theme = " + existing_theme);
 
         /** Setting items to the alert dialog */
@@ -329,7 +354,8 @@ public class NoteActivity extends BaseActivity {
         public void onClick(DialogInterface dialog, int which) {
             Log.d(LOG_TAG,"which = " + which);
             Editor editor = mPrefs.edit();
-            editor.putInt("theme", ((AlertDialog)dialog).getListView().getCheckedItemPosition());
+            editor.putInt(BaseActivity.SHARED_PREF_KEY_THEME,
+                    ((AlertDialog)dialog).getListView().getCheckedItemPosition());
             editor.commit();
             Intent intent=new Intent (getBaseContext(), NoteActivity.class);
 

@@ -20,7 +20,8 @@
         <item name="saveButton">@drawable/ic_action_save_light</item>
         <item name="searchButton">@drawable/ic_search_light</item>
         <item name="paletteButton">@drawable/ic_palette_light</item>
-        <item name="homeButtonNotes">@drawable/ic_assignment_light</item>
+        <item name="homeButtonNotesLinear">@drawable/ic_view_headline_light</item>
+        <item name="homeButtonNotesGrid">@drawable/ic_dashboard_light</item>
         <item name="homeButtonViewNote">@drawable/ic_speaker_notes_light</item>
         <item name="backgroundcolor">@color/background_material_dark</item>
         <item name="fab_color">@color/primary_dark_material_dark</item>
@@ -46,7 +47,8 @@
         <item name="saveButton">@drawable/ic_action_save_dark</item>
         <item name="searchButton">@drawable/ic_search_dark</item>
         <item name="paletteButton">@drawable/ic_palette_dark</item>
-        <item name="homeButtonNotes">@drawable/ic_assignment_dark</item>
+        <item name="homeButtonNotesLinear">@drawable/ic_view_headline_dark</item>
+        <item name="homeButtonNotesGrid">@drawable/ic_dashboard_dark</item>
         <item name="homeButtonViewNote">@drawable/ic_speaker_notes_dark</item>
         <item name="backgroundcolor">@color/background_material_light</item>
         <item name="fab_color">@color/primary_dark_material_light</item>
@@ -72,7 +74,8 @@
         <item name="saveButton">@drawable/ic_action_save_dark</item>
         <item name="searchButton">@drawable/ic_search_dark</item>
         <item name="paletteButton">@drawable/ic_palette_dark</item>
-        <item name="homeButtonNotes">@drawable/ic_assignment_dark</item>
+        <item name="homeButtonNotesLinear">@drawable/ic_view_headline_dark</item>
+        <item name="homeButtonNotesGrid">@drawable/ic_dashboard_dark</item>
         <item name="homeButtonViewNote">@drawable/ic_speaker_notes_dark</item>
         <item name="backgroundcolor">@color/background_material_dark</item>
         <item name="fab_color">@color/primary_dark_material_dark</item>
@@ -98,7 +101,8 @@
         <item name="saveButton">@drawable/ic_action_save_light</item>
         <item name="searchButton">@drawable/ic_search_light</item>
         <item name="paletteButton">@drawable/ic_palette_light</item>
-        <item name="homeButtonNotes">@drawable/ic_assignment_light</item>
+        <item name="homeButtonNotesLinear">@drawable/ic_view_headline_light</item>
+        <item name="homeButtonNotesGrid">@drawable/ic_dashboard_light</item>
         <item name="homeButtonViewNote">@drawable/ic_speaker_notes_light</item>
         <item name="backgroundcolor">@color/background_material_light</item>
         <item name="fab_color">@color/primary_dark_material_light</item>
@@ -124,7 +128,8 @@
         <item name="saveButton">@drawable/ic_action_save_dark</item>
         <item name="searchButton">@drawable/ic_search_dark</item>
         <item name="paletteButton">@drawable/ic_palette_dark</item>
-        <item name="homeButtonNotes">@drawable/ic_assignment_dark</item>
+        <item name="homeButtonNotesLinear">@drawable/ic_view_headline_dark</item>
+        <item name="homeButtonNotesGrid">@drawable/ic_dashboard_dark</item>
         <item name="homeButtonViewNote">@drawable/ic_speaker_notes_dark</item>
         <item name="backgroundcolor">@color/background_material_dark</item>
         <item name="fab_color">@color/primary_dark_material_dark</item>
@@ -148,7 +153,8 @@
         <item name="saveButton">@drawable/ic_action_save_light</item>
         <item name="searchButton">@drawable/ic_search_light</item>
         <item name="paletteButton">@drawable/ic_palette_light</item>
-        <item name="homeButtonNotes">@drawable/ic_assignment_light</item>
+        <item name="homeButtonNotesLinear">@drawable/ic_view_headline_light</item>
+        <item name="homeButtonNotesGrid">@drawable/ic_dashboard_light</item>
         <item name="homeButtonViewNote">@drawable/ic_speaker_notes_light</item>
         <item name="backgroundcolor">@color/background_material_light</item>
         <item name="fab_color">@color/primary_dark_material_light</item>

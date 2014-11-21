@@ -7,7 +7,8 @@
     <attr name="saveButton"/>
     <attr name="searchButton"/>
     <attr name="paletteButton"/>
-    <attr name="homeButtonNotes"/>
+    <attr name="homeButtonNotesLinear"/>
+    <attr name="homeButtonNotesGrid"/>
     <attr name="homeButtonViewNote"/>
     <attr name="backgroundcolor" format="color" />
     <attr name="fab_color" format="color" />

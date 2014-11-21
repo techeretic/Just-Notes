@@ -15,6 +15,8 @@ public abstract class BaseActivity extends ActionBarActivity {
 
     private static final String LOG_TAG = "BaseActivity";
     public static final String SHARED_PREF_APP_DATA = "APP_DATA";
+    public static final String SHARED_PREF_KEY_THEME = "theme";
+    public static final String SHARED_PREF_KEY_LAYOUT = "layout";
 
     public static final int VIEW_CODE = 1;
 
@@ -35,7 +37,7 @@ public abstract class BaseActivity extends ActionBarActivity {
         Log.d(LOG_TAG, "Setting Theme in onCreate");
         if (theme == -1) {
             Editor editor = mPrefs.edit();
-            editor.putInt("theme", 0);
+            editor.putInt(SHARED_PREF_KEY_THEME, 0);
             editor.commit();
             StyleAttributes.setStyleAttributes(BaseActivity.this, R.style.AppThemeDark);
         } else {
