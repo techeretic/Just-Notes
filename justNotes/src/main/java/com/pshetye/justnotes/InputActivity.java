@@ -22,9 +22,7 @@ import android.widget.EditText;
 public class InputActivity extends BaseActivity {
 
     private static final String LOG_TAG = "InputActivity";
-/*
-    private FloatingActionButton fab_save_btn = null;
-*/
+
     private MyNote mNote = null;
 
     private String noteContent = null;
@@ -40,26 +38,10 @@ public class InputActivity extends BaseActivity {
         if (mNote != null) {
             noteContent = mNote.getNote();
             noteTitle = mNote.getTitle();
-    		setActionBarIcon(StyleAttributes.editButton);
+            setActionBarIcon(StyleAttributes.editButton);
         } else {
-    		setActionBarIcon(StyleAttributes.addButton);
+            setActionBarIcon(StyleAttributes.addButton);
         }
-/*
-        // Add Button - Holder Fragment
-        fab_save_btn = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_save_light))
-                .withButtonColor(getResources().getColor(R.color.accent_blue))
-                .withGravity(Gravity.TOP | Gravity.END).withMargins(15, 15, 0, 0).create();
-        NoteAnimator.animateFAB(getApplicationContext(), fab_save_btn, NoteAnimator.IN,
-                NoteAnimator.TOP);
-        fab_save_btn.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                saveNote();
-            }
-        });
-*/
         if (mNote != null) {
             EditText textView0 = (EditText) findViewById(R.id.editText0);
             EditText textView1 = (EditText) findViewById(R.id.editText1);
@@ -92,11 +74,6 @@ public class InputActivity extends BaseActivity {
     }
 
     public static void launchInput(BaseActivity activity, View transitionView, String url) {
-        /*
-         * ActivityOptionsCompat options =
-         * ActivityOptionsCompat.makeSceneTransitionAnimation( activity,
-         * transitionView, LOG_TAG);
-         */
         ActivityOptionsCompat options = ActivityOptionsCompat.makeScaleUpAnimation(transitionView,
                 (int) transitionView.getTranslationX(), (int) transitionView.getTranslationY(),
                 transitionView.getWidth(), transitionView.getHeight());

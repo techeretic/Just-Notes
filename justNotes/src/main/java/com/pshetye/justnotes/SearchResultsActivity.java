@@ -94,14 +94,14 @@ public class SearchResultsActivity extends BaseActivity {
 
         mRecyclerView.addOnItemTouchListener(new RecyclerItemClickListener(
                 SearchResultsActivity.this, new RecyclerItemClickListener.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(View view, int position) {
-                        Log.d(LOG_TAG, "Inside onClick");
-                        MyNote note = sMyNotes.get(position);
-                        ViewNoteActivity.launchViewNote(SearchResultsActivity.this,
-                                view.findViewById(R.id.temp_view), note);
-                    }
-                }));
+            @Override
+            public void onItemClick(View view, int position) {
+                Log.d(LOG_TAG, "Inside onClick");
+                MyNote note = sMyNotes.get(position);
+                ViewNoteActivity.launchViewNote(SearchResultsActivity.this,
+                        view.findViewById(R.id.temp_view), note);
+            }
+        }));
     }
 
     private int getScreenOrientation() {

@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.ViewCompat;
+import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.Gravity;
@@ -28,13 +29,7 @@ import android.widget.TextView;
 public class ViewNoteActivity extends BaseActivity {
 
     private static final String LOG_TAG = "ViewNoteActivity";
-/*
-    private FloatingActionButton fab_share_btn = null;
 
-    private FloatingActionButton fab_edit_btn = null;
-
-    private FloatingActionButton fab_delete_btn = null;
-*/
     private String noteContent = null;
 
     private String noteTitle = null;
@@ -66,68 +61,17 @@ public class ViewNoteActivity extends BaseActivity {
             noteTitleView.setText(noteTitle);
             noteTitleView.setMovementMethod(new ScrollingMovementMethod());
         }
-        
-        ViewCompat.setTransitionName(findViewById(R.id.layout_view),"noteview");
+
+        ViewCompat.setTransitionName(findViewById(R.id.layout_view), "noteview");
 
         noteTextView.setText(noteContent);
         noteTextView.setMovementMethod(new ScrollingMovementMethod());
-/*
-        // Share Button - Note Fragment
-        fab_share_btn = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_share_light))
-                .withButtonColor(getResources().getColor(R.color.accent_blue))
-                .withGravity(Gravity.TOP | Gravity.END).withMargins(15, 15, 0, 0).create();
-        fab_share_btn.setVisibility(View.GONE);
-        fab_share_btn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                shareNote();
-            }
-        });
-
-        // Delete Button - Note Fragment
-        fab_delete_btn = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_discard_light))
-                .withButtonColor(getResources().getColor(R.color.accent_blue))
-                .withGravity(Gravity.TOP | Gravity.END).withMargins(0, 15, 65, 0).create();
-        fab_delete_btn.setVisibility(View.GONE);
-        fab_delete_btn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                deleteNote();
-            }
-        });
-
-        // Delete Button - Note Fragment
-        fab_edit_btn = new FloatingActionButton.Builder(this)
-                .withDrawable(getResources().getDrawable(R.drawable.ic_action_edit_light))
-                .withButtonColor(getResources().getColor(R.color.accent_blue))
-                .withGravity(Gravity.TOP | Gravity.END).withMargins(0, 15, 130, 0).create();
-        fab_edit_btn.setVisibility(View.GONE);
-        fab_edit_btn.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // TODO Auto-generated method stub
-                InputActivity.launchInput(ViewNoteActivity.this, v, mNote);
-            }
-        });
-*/
-		setActionBarIcon(StyleAttributes.homeButtonViewNote);
+        setActionBarIcon(StyleAttributes.homeButtonViewNote);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.note, menu);
-/*
-        Animation slideInTop = AnimationUtils.loadAnimation(ViewNoteActivity.this,
-                R.anim.abc_slide_in_top);
-        slideInTop.setDuration(750);
-        MenuItem share = menu.findItem(R.id.action_share);
-        MenuItem edit = menu.findItem(R.id.action_edit);
-        MenuItem delete = menu.findItem(R.id.action_delete);
-*/
         return true;
     }
 
@@ -135,13 +79,13 @@ public class ViewNoteActivity extends BaseActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_delete:
-            	deleteNote();
+                deleteNote();
                 return true;
             case R.id.action_share:
-            	shareNote();
-            	return true;
+                shareNote();
+                return true;
             case R.id.action_edit:
-            	InputActivity.launchInput(ViewNoteActivity.this, findViewById(R.id.layout_view), mNote);
+                InputActivity.launchInput(ViewNoteActivity.this, findViewById(R.id.layout_view), mNote);
         }
 
         return super.onOptionsItemSelected(item);
@@ -154,8 +98,8 @@ public class ViewNoteActivity extends BaseActivity {
     }
 
     public static void launchViewNote(BaseActivity activity, View transitionView, MyNote note) {
-        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation( activity,
-                         transitionView, "noteview");
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(activity,
+                transitionView, "noteview");
         Intent intent = new Intent(activity, ViewNoteActivity.class);
         intent.putExtra("Note", note);
         ActivityCompat.startActivityForResult(activity, intent, BaseActivity.VIEW_CODE,
@@ -186,15 +130,6 @@ public class ViewNoteActivity extends BaseActivity {
         } else {
             setResult(RESULT_CANCELED);
         }
-/*
-        NoteAnimator.animateFAB(getApplicationContext(), fab_delete_btn, NoteAnimator.OUT,
-                NoteAnimator.TOP);
-        NoteAnimator.animateFAB(getApplicationContext(), fab_edit_btn, NoteAnimator.OUT,
-                NoteAnimator.TOP);
-        NoteAnimator.animateFAB(getApplicationContext(), fab_share_btn, NoteAnimator.OUT,
-                NoteAnimator.TOP);
-*/
-        //endActivity();
         super.onBackPressed();
     }
 
@@ -227,22 +162,17 @@ public class ViewNoteActivity extends BaseActivity {
     protected void onResume() {
         // TODO Auto-generated method stub
         super.onResume();
-/*
-        NoteAnimator.animateFAB(getApplicationContext(), fab_delete_btn, NoteAnimator.IN,
-                NoteAnimator.TOP);
-        NoteAnimator.animateFAB(getApplicationContext(), fab_edit_btn, NoteAnimator.IN,
-                NoteAnimator.TOP);
-        NoteAnimator.animateFAB(getApplicationContext(), fab_share_btn, NoteAnimator.IN,
-                NoteAnimator.TOP);
-*/
+
+        noteTitleView.setMovementMethod(LinkMovementMethod.getInstance());
+        noteTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     @TargetApi(Build.VERSION_CODES.L)
-	private void endActivity() {
-    	finishAfterTransition();
+    private void endActivity() {
+        finishAfterTransition();
     }
 
     public void setTranstionName(TextView tv) {
-    	ViewCompat.setTransitionName(tv, "noteview");
+        ViewCompat.setTransitionName(tv, "noteview");
     }
 }

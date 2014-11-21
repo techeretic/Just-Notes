@@ -20,7 +20,7 @@ public class NoteAnimator {
     public static final String OUT = "OUT";
 
     public static void animateFAB(Context context, FloatingActionButton fab, String directionTo,
-            String fromWhere) {
+                                  String fromWhere) {
         if (fromWhere.equals(TOP)) {
             if (directionTo.equals(IN)) {
                 Animation slideInTop = AnimationUtils.loadAnimation(context,

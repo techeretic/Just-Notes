@@ -2,6 +2,7 @@
 package com.pshetye.justnotes;
 
 import com.pshetye.justnotes.util.StyleAttributes;
+
 import android.annotation.TargetApi;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -23,8 +24,8 @@ public abstract class BaseActivity extends ActionBarActivity {
     public static final int INPUT_CODE = 2;
 
     protected abstract int getLayoutResource();
-    
-    private Toolbar toolbar= null;
+
+    private Toolbar toolbar = null;
 
     private SharedPreferences mPrefs;
 
@@ -85,7 +86,7 @@ public abstract class BaseActivity extends ActionBarActivity {
     }
 
     public Toolbar getToolbar() {
-    	return toolbar;
+        return toolbar;
     }
 
     @TargetApi(Build.VERSION_CODES.L)

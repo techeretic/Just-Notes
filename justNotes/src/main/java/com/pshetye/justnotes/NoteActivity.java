@@ -60,7 +60,7 @@ public class NoteActivity extends BaseActivity {
     public static boolean sDoUpdate = false;
 
     private RecyclerView mRecyclerView;
-    
+
     private SharedPreferences mPrefs;
 
     private static final int sLinear = 1;
@@ -188,7 +188,7 @@ public class NoteActivity extends BaseActivity {
                     mCurrentLayout = sStaggeredGrid;
                     displayNotes(mCurrentLayout);
                 }
-                Log.d(LOG_TAG,"IN onOptionsItemSelected | mCurrentLayout = " + mCurrentLayout);
+                Log.d(LOG_TAG, "IN onOptionsItemSelected | mCurrentLayout = " + mCurrentLayout);
                 Editor editor = mPrefs.edit();
                 editor.putInt(BaseActivity.SHARED_PREF_KEY_LAYOUT, mCurrentLayout);
                 editor.commit();
@@ -308,10 +308,10 @@ public class NoteActivity extends BaseActivity {
             if (orientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
                     || orientation == ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT) {
                 mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2,
-                            StaggeredGridLayoutManager.VERTICAL));
+                        StaggeredGridLayoutManager.VERTICAL));
             } else {
                 mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(3,
-                            StaggeredGridLayoutManager.VERTICAL));
+                        StaggeredGridLayoutManager.VERTICAL));
             }
             setActionBarIcon(StyleAttributes.homeButtonNotesLinear);
         }
@@ -330,7 +330,7 @@ public class NoteActivity extends BaseActivity {
         b.setTitle("Choose your Application Theme");
 
         int existing_theme = mPrefs.getInt(BaseActivity.SHARED_PREF_KEY_THEME, 0);
-        Log.d(LOG_TAG,"Theme info | existing_theme = " + existing_theme);
+        Log.d(LOG_TAG, "Theme info | existing_theme = " + existing_theme);
 
         /** Setting items to the alert dialog */
         b.setSingleChoiceItems(choose, existing_theme, null);
@@ -352,19 +352,19 @@ public class NoteActivity extends BaseActivity {
 
         @Override
         public void onClick(DialogInterface dialog, int which) {
-            Log.d(LOG_TAG,"which = " + which);
+            Log.d(LOG_TAG, "which = " + which);
             Editor editor = mPrefs.edit();
             editor.putInt(BaseActivity.SHARED_PREF_KEY_THEME,
-                    ((AlertDialog)dialog).getListView().getCheckedItemPosition());
+                    ((AlertDialog) dialog).getListView().getCheckedItemPosition());
             editor.commit();
-            Intent intent=new Intent (getBaseContext(), NoteActivity.class);
+            Intent intent = new Intent(getBaseContext(), NoteActivity.class);
 
-            AlarmManager am = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-            am.set(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis() + 500, 
-            PendingIntent.getActivity(getBaseContext(), 0, intent, PendingIntent.FLAG_ONE_SHOT
-                                    | PendingIntent.FLAG_CANCEL_CURRENT));
+            AlarmManager am = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+            am.set(AlarmManager.RTC_WAKEUP, Calendar.getInstance().getTimeInMillis() + 500,
+                    PendingIntent.getActivity(getBaseContext(), 0, intent, PendingIntent.FLAG_ONE_SHOT
+                            | PendingIntent.FLAG_CANCEL_CURRENT));
             finish();
         }
-        
+
     }
 }

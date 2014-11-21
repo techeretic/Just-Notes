@@ -18,12 +18,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class RecycleAdapter extends
-		RecyclerView.Adapter<RecycleAdapter.ViewHolder> implements
-		View.OnLongClickListener {
+        RecyclerView.Adapter<RecycleAdapter.ViewHolder> implements
+        View.OnLongClickListener {
     private final static String LOG_TAG = "RecycleAdapter";
 
     private static List<MyNote> mNotes = new ArrayList<MyNote>();
-    
+
     private Context mContext;
 
     // Provide a reference to the views for each data item
@@ -47,8 +47,8 @@ public class RecycleAdapter extends
 
     // Provide a suitable constructor (depends on the kind of dataset)
     public RecycleAdapter(List<MyNote> objects, Context context) {
-    	Log.d(LOG_TAG, "Inside Constructor");
-    	mContext = context;
+        Log.d(LOG_TAG, "Inside Constructor");
+        mContext = context;
         mNotes = objects;
     }
 
@@ -85,9 +85,9 @@ public class RecycleAdapter extends
         return mNotes.size();
     }
 
-	@Override
-	public boolean onLongClick(View view) {
-		view = LayoutInflater.from(mContext).inflate(0, null);
-		return true;
-	}
+    @Override
+    public boolean onLongClick(View view) {
+        view = LayoutInflater.from(mContext).inflate(0, null);
+        return true;
+    }
 }

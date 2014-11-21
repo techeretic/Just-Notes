@@ -12,11 +12,11 @@ import java.util.Objects;
 public class MyNote implements Parcelable {
 
     private static final String LOG_TAG = "MyNote";
-    
+
     private static final String DATE_FORMAT = "dd/MM/yyyy kk:mm:ss";
 
     long _id;
-    
+
     String pTitle;
 
     String pNote;
@@ -107,7 +107,7 @@ public class MyNote implements Parcelable {
         String[] data = new String[4];
 
         in.readStringArray(data);
-        
+
         this._id = Long.valueOf(data[0]);
         this.pTitle = data[1];
         this.pNote = data[2];
@@ -123,7 +123,7 @@ public class MyNote implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         // TODO Auto-generated method stub
-        dest.writeStringArray(new String[] {
+        dest.writeStringArray(new String[]{
                 Objects.toString(this._id, null), this.pTitle, this.pNote, this.pDate
         });
     }

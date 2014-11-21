@@ -102,10 +102,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public MyNote getNote(long _id) {
         SQLiteDatabase db = this.getReadableDatabase();
 
-        Cursor cursor = db.query(MYNOTES, new String[] {
+        Cursor cursor = db.query(MYNOTES, new String[]{
                 KEY_ID, KEY_NOTE
-        }, KEY_ID + "=?", new String[] {
-            String.valueOf(_id)
+        }, KEY_ID + "=?", new String[]{
+                String.valueOf(_id)
         }, null, null, null, null);
         if (cursor != null)
             cursor.moveToFirst();
@@ -145,7 +145,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         List<String> noteList = new ArrayList<String>();
         String selectQuery = "SELECT  * FROM " + MYNOTES; // + " ORDER BY " +
-                                                          // KEY_ID + " DESC";
+        // KEY_ID + " DESC";
 
         Cursor cursor = db.rawQuery(selectQuery, null);
 
@@ -182,34 +182,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(KEY_DATE, MyNote.NoteDateFormat.format(new Date()));
 
         // updating row
-        return db.update(MYNOTES, values, KEY_ID + " = ?", new String[] {
-            String.valueOf(note.getID())
+        return db.update(MYNOTES, values, KEY_ID + " = ?", new String[]{
+                String.valueOf(note.getID())
         });
     }
 
     // Deleting single contact
     public void deleteNote(MyNote note) {
         SQLiteDatabase db = this.getWritableDatabase();
-        db.delete(MYNOTES, KEY_ID + " = ?", new String[] {
-            String.valueOf(note.getID())
+        db.delete(MYNOTES, KEY_ID + " = ?", new String[]{
+                String.valueOf(note.getID())
         });
         if (note.getID() != 0 && note.getID() < notes) {
 
         }
         db.close();
     }
-    
+
     //Searching notes based on note content
-    public List<MyNote> searchNotes(String query){
+    public List<MyNote> searchNotes(String query) {
         SQLiteDatabase db = this.getReadableDatabase();
         List<MyNote> noteList = new ArrayList<MyNote>();
-		String selectQuery = "SELECT  * FROM " + MYNOTES 
-				+ " WHERE UPPER(" + KEY_NOTE + ") LIKE UPPER('%" + query + "%') "
-				+ " OR UPPER(" + KEY_TITLE + ") LIKE UPPER('%" + query + "%') "
-				+ "ORDER BY " + KEY_DATE + " DESC";
+        String selectQuery = "SELECT  * FROM " + MYNOTES
+                + " WHERE UPPER(" + KEY_NOTE + ") LIKE UPPER('%" + query + "%') "
+                + " OR UPPER(" + KEY_TITLE + ") LIKE UPPER('%" + query + "%') "
+                + "ORDER BY " + KEY_DATE + " DESC";
 
-		Log.d(LOG_TAG,"Query = " + query);
-		Log.d(LOG_TAG,"selectQuery = " + selectQuery);
+        Log.d(LOG_TAG, "Query = " + query);
+        Log.d(LOG_TAG, "selectQuery = " + selectQuery);
         Cursor cursor = db.rawQuery(selectQuery, null);
 
         // looping through all rows and adding to list
@@ -225,7 +225,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             } while (cursor.moveToNext());
         }
 
-		Log.d(LOG_TAG,"noteList,SIZE = " + noteList.size());
+        Log.d(LOG_TAG, "noteList,SIZE = " + noteList.size());
         // return contact list
         return noteList;
     }
