@@ -1,6 +1,7 @@
 
 package com.pshetye.justnotes;
 
+import com.nispok.snackbar.Snackbar;
 import com.pshetye.justnotes.adapters.RecycleAdapter;
 import com.pshetye.justnotes.adapters.RecyclerItemClickListener;
 import com.pshetye.justnotes.database.DatabaseHelper;

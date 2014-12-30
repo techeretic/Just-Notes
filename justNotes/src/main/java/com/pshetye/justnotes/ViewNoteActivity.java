@@ -1,6 +1,7 @@
 
 package com.pshetye.justnotes;
 
+import com.nispok.snackbar.Snackbar;
 import com.pshetye.justnotes.database.DatabaseHelper;
 import com.pshetye.justnotes.database.MyNote;
 import com.pshetye.justnotes.fab.FloatingActionButton;
@@ -67,6 +68,10 @@ public class ViewNoteActivity extends BaseActivity {
         noteTextView.setText(noteContent);
         noteTextView.setMovementMethod(new ScrollingMovementMethod());
         setActionBarIcon(StyleAttributes.homeButtonViewNote);
+
+        Snackbar.with(getApplicationContext()) // context
+                .text("Note last updated on : " + mNote.getDate()) // text to display
+                .show(this); // activity where it is displayed
     }
 
     @Override
@@ -167,7 +172,7 @@ public class ViewNoteActivity extends BaseActivity {
         noteTextView.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
-    @TargetApi(Build.VERSION_CODES.L)
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void endActivity() {
         finishAfterTransition();
     }

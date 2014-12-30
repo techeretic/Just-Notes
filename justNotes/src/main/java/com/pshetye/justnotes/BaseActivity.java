@@ -71,7 +71,7 @@ public abstract class BaseActivity extends ActionBarActivity {
             }
         }
         setContentView(getLayoutResource());
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.L) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             statusBarColor();
         }
         toolbar = (Toolbar) findViewById(R.id.my_awesome_toolbar);
@@ -89,7 +89,7 @@ public abstract class BaseActivity extends ActionBarActivity {
         return toolbar;
     }
 
-    @TargetApi(Build.VERSION_CODES.L)
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void statusBarColor() {
         getWindow().setStatusBarColor(getResources().getColor(StyleAttributes.colorPrimaryDark));
     }

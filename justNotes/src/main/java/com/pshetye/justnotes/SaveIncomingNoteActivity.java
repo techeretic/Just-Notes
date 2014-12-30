@@ -1,6 +1,7 @@
 
 package com.pshetye.justnotes;
 
+import com.nispok.snackbar.Snackbar;
 import com.pshetye.justnotes.database.DatabaseHelper;
 import com.pshetye.justnotes.database.MyNote;
 
@@ -28,8 +29,9 @@ public class SaveIncomingNoteActivity extends Activity {
                         intent.getStringExtra(Intent.EXTRA_TEXT), "");
                 DatabaseHelper.getInstance(SaveIncomingNoteActivity.this).addNote(note);
                 NoteActivity.sDoUpdate = true;
-                Toast.makeText(SaveIncomingNoteActivity.this, "Saved to JustNotes",
-                        Toast.LENGTH_LONG).show();
+                Snackbar.with(getApplicationContext()) // context
+                        .text("Saved to JustNotes") // text to display
+                        .show(this); // activity where it is displayed
                 finish();
             }
         }

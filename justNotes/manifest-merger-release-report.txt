@@ -20,6 +20,9 @@ MERGED from com.android.support:support-v4:21.0.2:15:5
 MERGED from com.android.support:cardview-v7:21.0.2:15:5
 MERGED from com.android.support:recyclerview-v7:21.0.2:15:5
 MERGED from com.android.support:support-v4:21.0.2:15:5
+MERGED from com.nispok:snackbar:2.7.3:6:5
+MERGED from com.android.support:recyclerview-v7:21.0.2:15:5
+MERGED from com.android.support:support-v4:21.0.2:15:5
 	android:targetSdkVersion
 		ADDED from AndroidManifest.xml:9:9
 		INJECTED from AndroidManifest.xml:0:0
@@ -33,6 +36,9 @@ ADDED from AndroidManifest.xml:11:5
 MERGED from com.android.support:appcompat-v7:21.0.2:16:5
 MERGED from com.android.support:support-v4:21.0.2:16:5
 MERGED from com.android.support:cardview-v7:21.0.2:16:5
+MERGED from com.android.support:recyclerview-v7:21.0.2:17:5
+MERGED from com.android.support:support-v4:21.0.2:16:5
+MERGED from com.nispok:snackbar:2.7.3:10:5
 MERGED from com.android.support:recyclerview-v7:21.0.2:17:5
 MERGED from com.android.support:support-v4:21.0.2:16:5
 	android:label
@@ -125,6 +131,7 @@ ADDED from AndroidManifest.xml:55:7
 		ADDED from AndroidManifest.xml:56:11
 activity#android.support.v7.widget.TestActivity
 ADDED from com.android.support:recyclerview-v7:21.0.2:18:9
+MERGED from com.android.support:recyclerview-v7:21.0.2:18:9
 	android:label
 		ADDED from com.android.support:recyclerview-v7:21.0.2:18:19
 	android:name
