@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/exploded-aar/com.nispok/snackbar/2.7.3/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="887fa280e0a64dedda857ea4757a60bac63db3ec">
+        <dex dex="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-37b6d7252c8b46a3609b399cd43ee8295b08e4df.jar" />
+    </item>
+    <item
+        jar="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="7ae2d38807a43b2f2185ff4089a92c790b579e54">
+        <dex dex="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-45893bdd6c41818c46fb1d4c42a72ac5e749bc47.jar" />
+    </item>
+    <item
+        jar="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="4796f18d3750bf2bfa078407a94a7f9db35b440d">
+        <dex dex="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-334b7085a568cdc02c71540fa4073a8d3e70b457.jar" />
+    </item>
+    <item
+        jar="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/libs/internal_impl-21.0.2.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="962e8b12569c56dbdcf8367eb4eac8bb129cd18f">
+        <dex dex="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/internal_impl-21.0.2-a4678edd7a57c5fb164bcc2e24f888693e6d47f6.jar" />
+    </item>
+    <item
+        jar="/home/prathamesh/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/gson-2.3-7712c3892d4abe3a9de0894d5ad0e899fb11b69e.jar" />
+    </item>
+    <item
+        jar="/home/prathamesh/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.2/support-annotations-21.0.2.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="99373741f99a0556ee293c41e8faa1ca3ae8a4e6">
+        <dex dex="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/support-annotations-21.0.2-192ca05843ae1717d956cf0c0e2dbb6a46580388.jar" />
+    </item>
+    <item
+        jar="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="d1bf02de1c56d942e7a9d093b8610ba1ef4128e3">
+        <dex dex="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-7e29628fe0af0f09d24b41ca0dd62b67410738ca.jar" />
+    </item>
+    <item
+        jar="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/exploded-aar/com.android.support/cardview-v7/21.0.2/classes.jar"
+        jumboMode="false"
+        revision="21.0.2"
+        sha1="b017100da14f9c158c9f5f2f508333c224b24a7c">
+        <dex dex="/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-f6195c2e7699b02f3b1b088dbce681e78d277834.jar" />
+    </item>
+
+</items>

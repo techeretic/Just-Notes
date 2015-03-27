@@ -1,0 +1,9 @@
+/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/classes/release
+/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/support-annotations-21.0.2-192ca05843ae1717d956cf0c0e2dbb6a46580388.jar
+/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-f6195c2e7699b02f3b1b088dbce681e78d277834.jar
+/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-37b6d7252c8b46a3609b399cd43ee8295b08e4df.jar
+/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/internal_impl-21.0.2-a4678edd7a57c5fb164bcc2e24f888693e6d47f6.jar
+/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/gson-2.3-7712c3892d4abe3a9de0894d5ad0e899fb11b69e.jar
+/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-334b7085a568cdc02c71540fa4073a8d3e70b457.jar
+/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-45893bdd6c41818c46fb1d4c42a72ac5e749bc47.jar
+/home/prathamesh/workspace/Just-Notes/justNotes/build/intermediates/pre-dexed/release/classes-7e29628fe0af0f09d24b41ca0dd62b67410738ca.jar

@@ -2,8 +2,6 @@
 package com.pshetye.justnotes.adapters;
 
 import com.pshetye.justnotes.R;
-import com.pshetye.justnotes.R.id;
-import com.pshetye.justnotes.R.layout;
 import com.pshetye.justnotes.database.MyNote;
 
 import java.util.ArrayList;

@@ -1,0 +1,34 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"    
+    xmlns:justnotes="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.pshetye.justnotes.NoteActivity" >
+
+    <item
+        android:id="@+id/action_edit"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        justnotes:showAsAction="always"
+        android:icon="?attr/editButton"
+        android:title="@string/action_edit"
+        style="@android:style/Widget.ActionButton" />
+
+    <item
+        android:id="@+id/action_delete"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        justnotes:showAsAction="always"
+        android:icon="?attr/deleteButton"
+        android:title="@string/action_delete"
+        style="@android:style/Widget.ActionButton" />
+
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        justnotes:showAsAction="always"
+        android:icon="?attr/shareButton"
+        android:title="@string/action_share"
+        style="@android:style/Widget.ActionButton" />
+    
+</menu>
+<!-- From: file:/home/prathamesh/workspace/Just-Notes/justNotes/src/main/res/menu/note.xml -->

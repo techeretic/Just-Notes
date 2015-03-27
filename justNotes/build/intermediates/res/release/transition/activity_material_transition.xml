@@ -1,0 +1,4 @@
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <changeBounds/>
+    <changeImageTransform/>
+</transitionSet><!-- From: file:/home/prathamesh/workspace/Just-Notes/justNotes/src/main/res/transition/activity_material_transition.xml -->
